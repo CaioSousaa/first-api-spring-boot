@@ -11,16 +11,16 @@ import lombok.Setter;
 
 import java.util.UUID;
 
-@Table(name = "user")
-@Entity
+@Table(name = "_user")
 @Setter
+@Entity
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "UUID")
     private UUID id;
 
     private String name;
