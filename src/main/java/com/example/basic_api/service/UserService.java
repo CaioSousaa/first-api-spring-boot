@@ -47,4 +47,12 @@ public class UserService {
         return newUser;
     }
 
+    public User deleteUser(UUID id) {
+        User deleteUser = this.userRepository.findById(id).orElseThrow();
+
+        userRepository.delete(deleteUser);
+
+        return deleteUser;
+    }
+
 }
